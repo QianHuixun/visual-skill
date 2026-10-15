@@ -29,7 +29,45 @@
 
 简单问答、单个命令或很小的改动不会强制生成 HTML 页面。
 
-## 安装到 Pi
+## 一行命令安装
+
+本仓库同时是一个可直接安装的 Pi Package。推荐使用 Pi 的包管理命令：
+
+```bash
+pi install git:github.com/QianHuixun/visual-skill
+```
+
+安装后重启 Pi，或在交互模式中执行：
+
+```text
+/reload
+```
+
+验证安装：
+
+```bash
+pi list
+```
+
+更新：
+
+```bash
+pi update git:github.com/QianHuixun/visual-skill
+```
+
+卸载：
+
+```bash
+pi remove git:github.com/QianHuixun/visual-skill
+```
+
+如果以后发布到 npm，安装命令可以是：
+
+```bash
+pi install npm:@qianhuixun/visual-first
+```
+
+## 手动安装到 Pi
 
 ### 方式一：安装到全局 Skill 目录
 
@@ -107,7 +145,7 @@ Skill 会根据任务自动匹配。也可以在 Pi 中显式加载：
 
 ## 依赖与配合
 
-本仓库只包含 `SKILL.md`，不捆绑渲染器或其他 Skill。是否能生成 HTML 或专用图，取决于当前 agent 环境是否安装了对应能力：
+本仓库只包含 `SKILL.md`，不捆绑渲染器或其他 Skill。
 
 - 没有可视化依赖时，仍会提供简洁的文字说明和证据
 - 不会因为缺少依赖而执行来源不明的安装脚本
@@ -117,7 +155,11 @@ Skill 会根据任务自动匹配。也可以在 Pi 中显式加载：
 
 ```text
 visual-skill/
-└── SKILL.md
+├── skills/
+│   └── visual-first/
+│       └── SKILL.md
+├── package.json
+└── README.md
 ```
 
 ## 安全说明

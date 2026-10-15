@@ -1,0 +1,11 @@
+{
+  "name": "@qianhuixun/visual-first",
+  "version": "1.0.0",
+  "description": "图优先协作模式：用清晰的行动优先说明、HTML 说明页和架构/流程图交付 AI coding agent 的工作结果。",
+  "keywords": ["pi-package", "pi-skill", "skill", "visual-first", "ai-agent"],
+  "license": "MIT",
+  "files": ["skills", "README.md"],
+  "pi": {
+    "skills": ["skills"]
+  }
+}
